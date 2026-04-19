@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #FF8C42;
+}
+
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --glass-blur: 16px;
+  
+  --primary: #FF8C42;
+  --primary-glow: rgba(255, 140, 66, 0.3);
+  --secondary: #5C6BC0;
+  
+  --bg-gradient: linear-gradient(135deg, #FFF8F0 0%, #FEE8D6 100%);
+  
+  --text-main: #1C0F00;
+  --text-muted: #7C5C3E;
+  --text-hint: #C4A882;
+  
+  --safe-area-bottom: env(safe-area-inset-bottom, 20px);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+#root {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-[16px] border border-white/30 rounded-[24px] shadow-[0_8px_32px_0_rgba(31,38,135,0.07)];
+  }
+
+  .glass-pill {
+    @apply bg-white/40 backdrop-blur-[8px] border border-white/20 rounded-full;
+  }
+
+  .haptic-press {
+    @apply transition-transform duration-100 active:scale-95;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+input, textarea {
+  user-select: text !important;
+}
