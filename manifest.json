@@ -1,0 +1,17 @@
+{
+  "name": "Spending Store",
+  "short_name": "SpendStore",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFF8F0",
+  "theme_color": "#FF8C42",
+  "description": "Symbolic Spending Tracker for Parents",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2489/2489065.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
