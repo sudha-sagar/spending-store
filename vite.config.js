@@ -22,6 +22,8 @@ export default defineConfig({
         theme_color: '#FF8C42',
         background_color: '#FFF8F0',
         display: 'standalone',
+        scope: '/spending-store/',
+        start_url: '/spending-store/',
         icons: [
           {
             src: 'icon-512.png',
